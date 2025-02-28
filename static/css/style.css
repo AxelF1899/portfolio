@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+.header-section {
+    width: 100%;
+    background: url('/static/img/bg.png') no-repeat center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.header-section h1 {
+    font-size: 4rem !important;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+}
+.header-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-style: italic;
+    letter-spacing: 1rem;
+}
+.portfolio-section {
+    padding: 60px 0;
+}
+.footer-section {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer-section p {
+    margin: 0;
+}
+.main-title {
+    font-size: 500rem;  
+    font-weight: bold;  
+    text-align: center;  
+}
+.logo-max {
+    max-width: 2rem;
+    height: auto;
+}
+.selectable{
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+.selectable:hover {
+    color: black;
+    text-decoration: none; /* Sin subrayado */ 
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 
+                0 0 20px rgba(0, 0, 0, 0.6);
+}
+.selectable-selected{
+    background: black;
+    background-size: cover;
+    color: white !important;
+    border-radius: 18px 18px 0 0;
+}
+.about-section {
+    padding: 30px 0; 
+    background-color: #f5f5f5;
+    color: #333;
+}
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 20px;  
+}
+.about-section .lead {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about-section ul {
+    list-style-type: none;
+    padding-left: 1.5rem; 
+}
+.about-section ul li {
+    margin-bottom: 10px;
+}
+.about-section img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.about-section button {
+    margin: 10px;
+}
+/*CARDS*/
+.card {
+    height: 100%;
+    min-width: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box ;
+    
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card-img-top {
+    height: 230px; 
+    object-fit: cover;
+}
+
+.portfolio-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.card-title, .card-text {
+    margin-bottom: 10px; 
+}
+
+.card-text {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+#logo {
+    clip-path: circle(50%); 
+    width: 150px; 
+    object-fit: cover;
+}
+
+.btn {
+    position: relative;
+    align-self: flex-end; 
+}
+
+.navbar.bg-glass {
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(10px); 
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; 
+}
+
+.navbar.bg-default {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="p-0 navbar navbar-expand-lg bg-default sticky-top shadow-sm">
+        <a class="navbar-brand" href="/">
+            <img id="logo" class="m-2 ml-4 img-fluid logo-max" src="/static/img/AL.png" alt="Index">
+        </a>
+        <div class="mt-3 collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if active_page == 'portfolio' %}selectable-selected{% else %}selectable{% endif %}" href="/">Portfolio</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if active_page == 'resume' %}selectable-selected{% else %}selectable{% endif %}" href="/resume">Resume</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if active_page == 'about' %}selectable-selected{% else %}selectable{% endif %}" href="/about">About me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid p-0 m-0">
+        {% block content %}{% endblock %}
+    </div>
+    <footer class="footer-section">
+        <div class="container">
+            <p>&copy; 2024 PAFB</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) { 
+                    navbar.classList.remove('bg-default');
+                    navbar.classList.add('bg-glass');
+                } else {
+                    navbar.classList.remove('bg-glass');
+                    navbar.classList.add('bg-default');
+                }
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
