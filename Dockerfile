@@ -1,4 +1,4 @@
-# Usa una imagen base adecuada para tu aplicación (por ejemplo, Python, Node.js, etc.)
+# Usa una imagen de Python ligera
 FROM python:3.10
 
 # Establece el directorio de trabajo
@@ -8,10 +8,10 @@ WORKDIR /app
 COPY . /app
 
 # Instala dependencias
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expone el puerto en el que corre la app (cambia si es necesario)
+# Expone el puerto que usa Flask
 EXPOSE 8080
 
 # Comando para ejecutar la aplicación
-CMD ["python", "app.py"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "app:app"]
