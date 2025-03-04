@@ -1,1 +1,3 @@
 app = "axel-bautista-dev"
+[build]
+  builtin = "python"
