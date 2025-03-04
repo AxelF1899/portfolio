@@ -1,3 +1,8 @@
+app = "axel-bautista-dev"
+
+[build]
+  image = "python:3.10"
+
 [[services]]
   internal_port = 8080
   protocol = "tcp"
