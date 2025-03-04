@@ -1,16 +1,27 @@
-app = "axel-bautista-dev"
+# fly.toml app configuration file generated for user-axel-fb on 2025-03-04T16:10:24-06:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'user-axel-fb'
+primary_region = 'qro'
 
 [build]
-  image = "python:3.10"
+  image = 'python:3.10'
 
 [[services]]
+  protocol = 'tcp'
   internal_port = 8080
-  protocol = "tcp"
 
   [[services.ports]]
-    handlers = ["http"]
     port = 80
+    handlers = ['http']
 
   [[services.ports]]
-    handlers = ["tls", "http"]
     port = 443
+    handlers = ['tls', 'http']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
