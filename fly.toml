@@ -7,7 +7,7 @@ app = 'user-axel-fb'
 primary_region = 'qro'
 
 [build]
-  image = 'python:3.10'
+  image = './Dockerfile'
 
 [[services]]
   protocol = 'tcp'
